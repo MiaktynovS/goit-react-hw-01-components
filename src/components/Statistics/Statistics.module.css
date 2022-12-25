@@ -1,20 +1,25 @@
 .statistics {
-	width: 335px;
+	width: 425px;
     margin: auto;
+    padding-top: 10px;
     border: solid 1px rgb(211, 221, 221);
+    background-color: rgb(193, 222, 226);
+    
 }
 
 .title {
 	font-size: 16p[];
 	color: #333333;
 	text-align: center;
-    margin-top: 30px;
-    margin-bottom: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .stat_list{
     height: 60px;
     display: flex;
+    justify-content: center;
+    column-gap: 5px;
     list-style: none;
 }
 
