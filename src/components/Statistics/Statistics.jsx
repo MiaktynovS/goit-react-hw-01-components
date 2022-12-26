@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Statistics.module.css'
-import getRandomHexColor from './getRandomHexColor';
 
 const Statistics = ({title, stats}) =>(
     <section className={styles.statistics}>
@@ -12,7 +11,7 @@ const Statistics = ({title, stats}) =>(
         return(
         <li className={styles.item} 
         key={id}
-        style={{ backgroundColor: getRandomHexColor() }}>
+        style={{ backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(16)}` }}>
           <span className={styles.label}>{label}</span>
           <span className={styles.percentage}>{percentage}%</span>
         </li>)
@@ -22,7 +21,7 @@ const Statistics = ({title, stats}) =>(
 );
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
